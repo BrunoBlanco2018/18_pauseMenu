@@ -59,16 +59,13 @@ end
 
 function OpenPauseMenu()
     triggerServerCallback("18_pausemenu:getPlayerData", function(cb)
-        print("open")
         if isOpen then
-            print("cerrando")
             isOpen = false
             SetNuiFocus(false, false)
             SendNUIMessage({
                 open = false,
             })
         else
-            print("abriendo")
             isOpen = true
             SetNuiFocus(true, true)
             SendNUIMessage({
